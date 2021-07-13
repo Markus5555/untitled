@@ -8,15 +8,15 @@
 <script>
     // 1. Оголосіть змінні str, num, flag и txt зі значеннями «Привіт», 123, true, «true».
     // За допомогою typeof переконайтесь, що значення змінних належать типам: string, number и  boolean.
-  let str = 'Hello';
-  let num = 123;
-  let flag = true;
-  let txt = 'true';
+    let str = 'Hello';
+    let num = 123;
+    let flag = true;
+    let txt = 'true';
 
-  console.log(typeof str);
-  console.log(typeof num);
-  console.log(typeof flag);
-  console.log(typeof txt);
+    console.log(typeof str);
+    console.log(typeof num);
+    console.log(typeof flag);
+    console.log(typeof txt);
     // 2. Оголосіть змінні a1, a2, a3, a4, a5. За домогою 3х математичних оператцій отримайте числа:
     //     34,
     //         12,
@@ -26,38 +26,42 @@
     // Старайтесь використовувати різні оператори.
     //     Example: 88 = (16 / 2) * 11
 
-  let a1 = 2;
-  let a2 = 16;
-  let a3 = 4;
-  let a4 = 5;
-  let a5 = 15;
+    let a1 = 2;
+    let a2 = 16;
+    let a3 = 4;
+    let a4 = 5;
+    let a5 = 15;
 
 
+    function result(a1, a2) {
+        return (a1 * a2) + a1;
+    }
 
-  function result(a1,a2){
-      return (a1 * a2) + a1;
-  }
-  console.log(result(2,16));
+    console.log(result(2, 16));
 
-  function result2(a1,a4){
-      return (a1 * a4) + a1;
-  }
-  console.log(result2(2,5));
+    function result2(a1, a4) {
+        return (a1 * a4) + a1;
+    }
 
-  function result3(a3,a4,a5){
-      return (a4*a5) - (a3+a4);
-  }
-  console.log(result3(4,5,15));
+    console.log(result2(2, 5));
 
-  function result4(a1,a2,a4){
-      return (a1*a4) + (a2*a4);
-  }
-  console.log(result4(a1,a2,a4));
+    function result3(a3, a4, a5) {
+        return (a4 * a5) - (a3 + a4);
+    }
 
-  function result5(a3,a5,a1,a2,a4){
-      return(a5*a3)+(a1*a2)-a4;
-  }
-  console.log(result5(a3,a5,a1,a2,a4))
+    console.log(result3(4, 5, 15));
+
+    function result4(a1, a2, a4) {
+        return (a1 * a4) + (a2 * a4);
+    }
+
+    console.log(result4(a1, a2, a4));
+
+    function result5(a3, a5, a1, a2, a4) {
+        return (a5 * a3) + (a1 * a2) - a4;
+    }
+
+    console.log(result5(a3, a5, a1, a2, a4));
 
     // 3.  Створіть змінні a6, a7, a8, a9, a10. Запишіть в них результати виразів:
     //     5 % 3,
@@ -65,7 +69,96 @@
     //     5 + '3',
     //     '5' - 3,
     //     75 + 'кг'
-let a6 = 5 % 3
+    let a6 = 5 % 3;
+    let a7 = 3 % 5;
+    let a8 = 5 + '3';
+    let a9 = '5' + 3;
+    let a10 = 75 + 'kg';
+
+    console.log([a6, a7, a8, a9, a10]);
+
+    // 4. Напишіть код, який вираховує площу прямокутника висотою 23см. (змінна height) та шириною 10см (змінна width).
+    // Значееня площі зберігати в змінній s.
+    let height = 23;
+    let width = 10;
+
+    function s(height, width) {
+        return (height * width);
+    }
+
+    console.log(s(height, width));
+
+    // 5.  Напиши код, который находит объем цилиндра высотой 10м (переменная heightC) и диаметром основания 4м (dC),
+    //    результат поместите в переменную v.
+
+    let heightc = 10;
+    let dc = 4;
+
+    function v(heightc, dc) {
+        return (heightc * dc);
+    }
+
+    console.log(v(heightc, dc));
+
+    // 6. У прямоугольного треугольника две стороны n (со значением 3) и m (со значением 4).
+    // Найдите гипотенузу k по теореме Пифагора (нужно использовать функцию Math.pow(число, степень) или оператор возведения в степень ** ).
+    let n = 3;
+    let m = 4;
+
+    Math.sqrt(n ** 2 + m ** 2);
+    console.log(Math.sqrt(n ** 2 + m ** 2));
+
+    // 8. Вывести в окно браузера при помощи метода alert() следующие данные: Ваше ФИО, возраст, хобби (каждой на новой строки спомощью \n).
+
+    // let name = 'Mark';
+    // let Lastname = "Kulchenkov";
+    // let age = 33;
+    // let hobby = 'fishing';
+
+
+    alert("Mark Kulchenkov");
+    alert('Your age is - 33');
+    alert('Best time ever is Fishing time');
+
+    //   9. Создать 4 переменные с использованием ключевого слова let с именами str1, str2, str3, concatenation.
+    //       Переменной str1 присвоить фразу ‘Кто ‘, str2 – ‘ты ‘, str3 – ‘такой?’
+    // Локальной переменной concatenation присвоить результат конкатенации 3-х строк: str1, str2, str3.
+    //       Вывести в документ содержимое переменной concatenation спомощью document.write
+
+    let str1 = 'Who';
+    let str2 = 'are';
+    let str3 = 'you?';
+    let concatenation = (`<h1>${str1} ${str2} ${str3}</h1>`);
+    document.write(concatenation);
+
+    // 10. Подумайте Какие значения выведет в окно браузера следующий фрагмент кода?  и почему?
+    let str4 = "20";
+    let a = 5;
+    document.write(str4 + a + "<br/>");
+    document.write(str4 - a + "<br/>");
+    document.write(str4 * "2" + "<br/>");
+    document.write(str4 / 2 + "<br/>");
+
+    // 13. С помощью окна ввода, вызываемого методом prompt, сделать сложение двух чисел, а вывод результата при помощи метода alert
+
+    let x = 10;
+    let y = 20;
+    let z = x+y;
+    prompt ('x+y');
+    alert(z);
+
+    // 14. С помощью окна ввода, вызываемого методом prompt, пользователь последовательно выводит имя, фамилию и возраст, а вам не обходимо вывести строку такого вида
+    // Доброго вечера Иван Иванов, мои поздравления что вам 32 , а вывод результата при помощи метода alert
+
+    // let name = 'Peter';
+    // let lastname = 'Parker';
+    // let age = 32;
+
+    let name = prompt("name");
+    let lastname = prompt("lastname");
+    let age = prompt("age");
+
+    alert('Good evening mr. ' + name + " " +lastname+' , my regards for your ' + age +'')
 
 </script>
 </body>
