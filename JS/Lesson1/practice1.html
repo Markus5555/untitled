@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // 1. Оголосіть змінні str, num, flag и txt зі значеннями «Привіт», 123, true, «true».
+    // За допомогою typeof переконайтесь, що значення змінних належать типам: string, number и  boolean.
+  let str = 'Hello';
+  let num = 123;
+  let flag = true;
+  let txt = 'true';
+
+  console.log(typeof str);
+  console.log(typeof num);
+  console.log(typeof flag);
+  console.log(typeof txt);
+    // 2. Оголосіть змінні a1, a2, a3, a4, a5. За домогою 3х математичних оператцій отримайте числа:
+    //     34,
+    //         12,
+    //         66,
+    //         90,
+    //         87
+    // Старайтесь використовувати різні оператори.
+    //     Example: 88 = (16 / 2) * 11
+
+  let a1 = 2;
+  let a2 = 16;
+  let a3 = 4;
+  let a4 = 5;
+  let a5 = 15;
+
+
+
+  function result(a1,a2){
+      return (a1 * a2) + a1;
+  }
+  console.log(result(2,16));
+
+  function result2(a1,a4){
+      return (a1 * a4) + a1;
+  }
+  console.log(result2(2,5));
+
+  function result3(a3,a4,a5){
+      return (a4*a5) - (a3+a4);
+  }
+  console.log(result3(4,5,15));
+
+  function result4(a1,a2,a4){
+      return (a1*a4) + (a2*a4);
+  }
+  console.log(result4(a1,a2,a4));
+
+  function result5(a3,a5,a1,a2,a4){
+      return(a5*a3)+(a1*a2)-a4;
+  }
+  console.log(result5(a3,a5,a1,a2,a4))
+
+    // 3.  Створіть змінні a6, a7, a8, a9, a10. Запишіть в них результати виразів:
+    //     5 % 3,
+    //     3 % 5,
+    //     5 + '3',
+    //     '5' - 3,
+    //     75 + 'кг'
+let a6 = 5 % 3
+
+</script>
+</body>
+</html>
