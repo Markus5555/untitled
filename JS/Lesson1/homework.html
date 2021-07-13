@@ -52,7 +52,39 @@
   box[10]= false;
   box[11]= true;
 
-  document.write(`box`);
+  console.log(box);
+
+  let person = {
+      name: 'Mark',
+      surname: 'Kulchenkov',
+      age: 33,
+  }
+  document.write(`<h1>Hello! ${person.name} ${person.surname}. Your age is ${person.age}.`)
+
+  let x = 100;
+  let y = '100';
+  let z = true;
+  console.log(typeof x)
+  console.log(typeof y)
+  console.log(typeof z)
+
+  let r = 5;
+  let t = 6;
+  let v = 10;
+  let o = 123;
+  let q = '123';
+  let truth = 5<6;
+  console.log(truth);
+  // 5 > 6 -> false
+  // 5 >= 6 -> false
+  // 5 === 6 -> false
+  // 10 = 10 -> true
+  // 10 === 10 -> true
+  // 10 > 10 -> false
+  // 10 < 10 -> false
+  // 10 ? 10 -> false
+  // 123 === '123' -> false
+  // 123 == '123' -> true
 
 
 </script>
