@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let company = 'okten';
+    let status = 'is cool';
+    document.write('<h1>' + company + ' ' + status + '<\h1>');
+    document.write(`<h1>${company} ${status}<\h1>`);
+    let a = 10;
+    let b = 20;
+    console.log(a + b);
+    console.log(13 % 5);
+    const con = 'sdfsfsg';
+    console.log(typeof company);
+    console.log(typeof a);
+    let skills = ['html', 'css', 'js']
+    console.log(skills[1]);
+    skills[3] = a;
+    console.log(skills);
+    console.log(typeof skills);
+    let me = {
+        id: '1',
+        name: 'Mark',
+        surname: 'Kulchenkov',
+        skills: ['html', 'css', 'js']
+    }
+    console.log(me);
+    console.log(me.name);
+    document.write(`<h2>my name is ${me.name} and my primary skill is ${me.skills[2]}</h2>`);
+
+    let products = [
+        {id: 1, title: 'Milk', price: 23},
+        {id: 2, title: 'Juice', price: 25},
+        {id: 3, title: 'Bread', price: 16}
+    ]
+    console.log(products)
+    console.log(products[0].id)
+    console.log(products[0].title)
+    console.log(products[0].price)
+    let product_1 = products[0];
+    document.write(`product #${products[0].id}. title - ${products[0].title}, price: ${products[0].price}`);
+    document.write(`product #${product_1.id}. title - ${product_1.title}, price: ${product_1.price}`);
+
+    let x = 10;
+    let y = 20;
+    let z = 30;
+    // or
+    // let truth = x<y || x>z;
+    // and
+    let truth = x < y && x > z;
+    console.log(truth)
+    if (truth) {
+        console.log('yes')
+    } else {
+        console.log('no')
+    }
+
+    function result2(a, b) {
+        let res = a + b;
+        return res;
+    }
+    console.log(result2(10,20));
+
+    function docwr(name){
+        document.write(`<h3>Hello! My name is ${name}</h3>`)
+    }
+    docwr('Kate')
+    docwr('Ben')
+    docwr('Giovani')
+
+
+</script>
+</body>
+</html>
