@@ -143,22 +143,59 @@
 
     let x = 10;
     let y = 20;
-    let z = x+y;
-    prompt ('x+y');
+    let z = x + y;
+    prompt('x+y');
     alert(z);
 
     // 14. С помощью окна ввода, вызываемого методом prompt, пользователь последовательно выводит имя, фамилию и возраст, а вам не обходимо вывести строку такого вида
     // Доброго вечера Иван Иванов, мои поздравления что вам 32 , а вывод результата при помощи метода alert
 
-    // let name = 'Peter';
-    // let lastname = 'Parker';
-    // let age = 32;
 
     let name = prompt("name");
     let lastname = prompt("lastname");
     let age = prompt("age");
 
-    alert('Good evening mr. ' + name + " " +lastname+' , my regards for your ' + age +'')
+    alert('Good evening mr. ' + name + " " + lastname + ' , my regards for your ' + age + '')
+
+    // =====================
+    // ======ДОП============
+    // =====================
+    //  1. Три різних числа вводяться через prompt().
+    //      За допомоги if else вивести іх в порядку зростання. (відсортувати по зростанню)
+
+    // let number1 = prompt('number_1');
+    // let number2 = prompt('number_2');
+    // let number3 = prompt('number_3');
+    //
+    // if (number1 > number2) {
+    //     console.log(number2)
+    // } else if (number2 > number3) {
+    //     console.log(number3)
+    // } else if (number1 > number3) {
+    //     console.log(number1)
+    // }
+
+
+    // 2.
+    // Все параматры получаем с клавиатуры!!!!
+    //     Имитируем поведение пешехода на перекстке.
+    //     Если светофор зеленый - вывести "иди".
+    //     Если светофор желтый - вывести "подожди".
+    //     Если светофор красный - вывести "стой".
+    //     Если светофор в аварийном режиме вывести "делай что хочешь"!
+
+
+    let color = prompt('Enter color');
+
+    if (color==='red'){
+        console.log('Stay')
+    }else if(color==='yellow'){
+        console.log('Wait')
+    }else if(color==='green'){
+        console.log('Walk')
+    }else{
+        console.log('Do what you want')
+    }
 
 </script>
 </body>
