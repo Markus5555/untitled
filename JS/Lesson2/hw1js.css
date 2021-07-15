@@ -1,0 +1,34 @@
+/*img{*/
+/*    width: 200px;*/
+/*    height: 300px;*/
+/*    padding-left: 100px;*/
+/*}*/
+/*info{*/
+/*    background-color: teal;*/
+
+/*}*/
+img{
+    width: 200px;
+    height: 300px;
+    padding-left: 100px;
+}
+.simpsonia div{
+    background: #53B774;
+}
+.product-image{
+    width: 200px;
+    height: 200px;
+    /*margin-top: 50px;*/
+    padding-left: 200px;
+}
+.product-title{
+    padding-left: 200px;
+    color: blue;
+}
+.product-card{
+    background-color: #59D4EB;
+}
+
+.product-card div{
+    margin: 50px;
+}
