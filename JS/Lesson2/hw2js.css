@@ -1,0 +1,9 @@
+.wrap{
+    display: flex;
+    flex-wrap: wrap;
+}
+.wrap div{
+    width: 18%;
+    background: #59D4EB;
+    margin: 5px;
+}
