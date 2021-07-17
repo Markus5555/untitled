@@ -3,6 +3,7 @@
     height: 500px;
     border-bottom: 10px solid darkslategray;
     margin: auto;
+    background-image: url("images/moe street.jpg");
 }
 #bart{
     width: 100px;
@@ -29,26 +30,27 @@
     100%{
         left: -40px;
     }
-}#barney{
+}
+#barney{
     width: 40px;
     height: 100px;
-    background-image: url("images/hydrant.png");
+    background-image: url("images/BarnyOldColors.png");
     background-size: 40px 100px;
     position: relative;
-    top: 300px;
+    top: 240px;
     left: 960px;
-    animation: barneytMov 3s infinite linear;
+    animation: barneyMov 3s infinite linear;
 }
 @keyframes barneyMov {
     0%{
-        top: 300px;
+        top: 240px;
     }
     100%{
         left: -40px;
     }
 }
 .jump{
-    animation: jump 0.3s  linear;
+    animation: jump 0.5s  linear;
 }
 @keyframes jump {
     0%{
