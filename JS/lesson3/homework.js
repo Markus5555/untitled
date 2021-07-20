@@ -47,7 +47,22 @@ console.log(cylinder(pi, h, r));
 // заборонено
 // )
 // ;
+function min_max(){
+    let max = arguments[0];
+    let min = arguments[0];
+    for (y = 0; y < arguments.length; y++){
+        if(arguments[y] > max){
+            max = arguments[y];
+        }
+        if (arguments[y] < min){
+            min = arguments[y];
+        }
+    };
+    console.log(max);
+    return min;
+}
 
+console.log(min_max(22, 33, 44, 55, -10))
 
 //створити функцію яка  створює блок з текстом. Текст задати через аргумент
 
@@ -100,16 +115,16 @@ list('створити функцію яка  створює ul з трьома 
 // цикл
 //)
 
-function list(text1, count) {
-    document.write(
-        `<ul>
-            <li>${text1}</li>
-            <li>${text1}</li>
-            <li>${text1}</li>
-        </ul>`
-    )
-    for (count = 0; count < list; count++) {
-       document.write(count ${text1});
+function list1(text2, count) {
+    document.write('<ul>');
+
+    for (let p = 0; p < count; p++){
+        document.write(`<li>${p} -- ${text2}</li>`)
     }
-};
-list('створити функцію яка  створює ul з трьома елементами li. Текст li задати через аргумент всім однаковий', 5);
+
+    document.write('</ul>');
+}
+list1('створити функцію яка  створює ul з трьома елементами li. Текст li задати через аргумент всім однаковий', 5);
+
+//- створити функцію яка приймає масив примітивних елементів (числа,стрінги,булеві), та будує для них список
+
