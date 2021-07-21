@@ -3,6 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <style>
+        .test {
+            background: red;
+            color: blue;
+        }
+        .fc {
+            background: red;
+            color: blue;
+        }
+    </style>
 </head>
 <body>
 <!--Напишіть код,  який за допомоги document.getElementById або document.getElementsByClassName або document.getElementsByTagName :-->
@@ -16,7 +26,7 @@
 <!-- - отримати всі елементи з класом fc_rules. визначити їм 2 події "клік", одна вивдоить текст елементу, інша довільний ьексь-->
 <!-- - поміняти колір тексту у всіх елементів fc_rules на червоний-->
 
-<p id="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis cupiditate deleniti
+<p id="content" class="test">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis cupiditate deleniti
     molestias mollitia pariatur porro saepe! Dolorem eaque earum eligendi, iste maxime molestias quam vitae.
     Dolore hic in quae sed.
 </p>
@@ -41,19 +51,22 @@
 
 <script>
 
-    let getContent = document.getElementById('content');
+    let getContent = document.getElementsByTagName('content');
     console.log(getContent);
+    getContent.innerText = 'qweerrewrwetrrtrwtrwetrwtwt';
     for (const contentElement of getContent) {
-        console.log(contentElement.classList);
+        console.log(contentElement.classList)
+        contentElement.classList.add('test')
     }
 
 
-    let getRules = document.getElementById('rules');
+    let getRules = document.getElementsByTagName('rules');
     console.log(getRules);
+    getRules.innerHTML = '<h1>sjdfnjsdfsljdflsdjflsdfjslfjdsjlfjlsfsljf</h1>';
     for (const rule of getRules) {
-
+        console.log(rule.classList);
     }
-    
+
 </script>
 </body>
 </html>
