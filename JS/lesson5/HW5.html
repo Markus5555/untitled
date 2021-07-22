@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <style>
-        .test {
-            background: red;
-            color: blue;
+        .fc_rules {
+            color: red;
         }
+
         .fc {
             background: red;
             color: blue;
@@ -26,7 +26,7 @@
 <!-- - отримати всі елементи з класом fc_rules. визначити їм 2 події "клік", одна вивдоить текст елементу, інша довільний ьексь-->
 <!-- - поміняти колір тексту у всіх елементів fc_rules на червоний-->
 
-<p id="content" class="test">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis cupiditate deleniti
+<p id="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis cupiditate deleniti
     molestias mollitia pariatur porro saepe! Dolorem eaque earum eligendi, iste maxime molestias quam vitae.
     Dolore hic in quae sed.
 </p>
@@ -51,21 +51,33 @@
 
 <script>
 
-    let getContent = document.getElementsByTagName('content');
+    let getContent = document.getElementById('content');
     console.log(getContent);
     getContent.innerText = 'qweerrewrwetrrtrwtrwetrwtwt';
-    for (const contentElement of getContent) {
-        console.log(contentElement.classList)
-        contentElement.classList.add('test')
-    }
+    //getContent.classList.add('test')
+    getContent.style.backgroundColor = 'red'
+    getContent.style.color = 'blue'
+
+    const getReds = document.getElementById('rules')
+    console.log(getReds);
+    getReds.innerHTML = '<h1>sjdfnjsdfsljdflsdjflsdfjslfjdsjlfjlsfsljf</h1>';
 
 
-    let getRules = document.getElementsByTagName('rules');
-    console.log(getRules);
-    getRules.innerHTML = '<h1>sjdfnjsdfsljdflsdjflsdfjslfjdsjlfjlsfsljf</h1>';
+    let getRules = document.getElementsByClassName('fc');
+
     for (const rule of getRules) {
         console.log(rule.classList);
     }
+
+    
+    const gEls = document.getElementsByClassName('fc_rules')
+    for (const gEl of gEls) {
+
+        gEl.onclick = function (){
+            console.log(gEl.textContent)
+        }
+    }
+
 
 </script>
 </body>
