@@ -1,59 +1,51 @@
-const params = new URLSearchParams(location.search).get('userId');
-const id = JSON.parse(params);
+const params = new URLSearchParams(location.search).get('post');
+const postObj = JSON.parse(params);
 
 
 //let post = {};
 
-// let postList = document.getElementsByClassName('posts')[0];
-// let postDiv = document.createElement('div');
-//
-// let post = document.createElement('post');
-// post.innerHTML = `${post.id}`
-// postDiv.appendChild(post)
-// postList.appendChild(postDiv)
+let wrap = document.getElementsByClassName('wrap')[0];
+let postDiv = document.createElement('div');
 
-fetch(`https://jsonplaceholder.typicode.com/users/${id}/posts`)
-    .then(value => value.json())
-    .then(posts => {
-        let postsWrap = document.getElementsByClassName('posts-wrap')[0];
-        for (const post of posts) {
-            let div = document.createElement('div');
-            let title = document.createElement('h2');
-            let body = document.createElement('p');
-            let btn = document.createElement('button');
-            // let post = document.createElement('div')
-            // post.innerHTML = `${posts.id}`
+let id = document.createElement('div');
+let userId = document.createElement('div');
+let title = document.createElement('div');
+let body = document.createElement('div');
+let btn = document.createElement('button');
 
-            title.innerText = post.title;
-            body.innerText = post.body;
-            btn.innerText = 'comments';
 
-            div.appendChild(title);
-            div.appendChild(body);
-            div.appendChild(btn);
-            btn.onclick = () => {
-                btn.style = 'display: none'
+id.innerHTML = `id: ${postObj.id}`
+userId.innerHTML = `userId: ${postObj.userId}`
+title.innerHTML = `title: ${postObj.title}`
+body.innerHTML = `body: ${postObj.body}`
+btn.innerText = 'show comments';
 
-                fetch(`https://jsonplaceholder.typicode.com/posts/${post.id}/comments`)
-                    .then(value => value.json())
-                    .then(comments => {
-                        let ulList = document.getElementsByTagName('ul');
-                        for (const u of ulList) {
-                            u.innerText = '';
-                        }
-                        let ul = document.createElement('ul');
+postDiv.append(id, userId, title, body, btn)
+wrap.appendChild(postDiv)
 
-                        for (const comment of comments) {
-                            let li = document.createElement('li');
-                            li.innerText = comment.name;
-                            ul.appendChild(li);
-                        }
-                        div.appendChild(ul);
 
-                    })
-            };
+btn.onclick = () => {
+    btn.style = 'display: none'
 
-            postsWrap.appendChild(div);
-        }
+    fetch(`https://jsonplaceholder.typicode.com/posts/${postObj.id}/comments`)
+        .then(value => value.json())
+        .then(comments => {
+            let ulList = document.getElementsByTagName('ul');
+            for (const u of ulList) {
+                u.innerText = '';
+            }
+            let ul = document.createElement('ul');
+            ul.classList.add('uls')
+            for (const comment of comments) {
+                let li = document.createElement('li');
+                li.classList.add('lis')
+                li.innerText = comment.name;
+                ul.appendChild(li);
+            }
+            wrap.appendChild(ul);
 
-    })
+        })
+};
+
+
+

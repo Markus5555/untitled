@@ -1,0 +1,21 @@
+.wrap{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #d77c7c;
+    padding: 20px 0;
+}
+.lis{
+    justify-content: space-between;
+    width: 25%;
+    height: 200px;
+    padding: 10px;
+    margin: 25px;
+    background-color: #59D4EB;
+    border: black solid;
+}
+.uls{
+    display: flex;
+    background-color: #53B774;
+    border: black solid;
+}

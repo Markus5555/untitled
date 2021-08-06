@@ -1,0 +1,14 @@
+.users-wrap {
+    display: flex;
+    justify-content: space-around;
+    background-color: #d77c7c;
+    flex-wrap: wrap;
+}
+
+.user-item {
+    width: 40%;
+    padding: 10px;
+    margin: 25px;
+    background-color: #e06868;
+    text-align: center;
+}

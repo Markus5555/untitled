@@ -5,7 +5,9 @@ fetch('https://jsonplaceholder.typicode.com/users')
         let usersWrap = document.getElementsByClassName('users-wrap')[0];
         for (const user of value) {
             let div = document.createElement('div');
-            div.innerText = user.id + ' ' + user.name;
+            div.innerHTML = `<b>id: </b>${user.id} <br/> <b>name: </b>${user.name} <br/>`;
+
+            div.classList.add('user-item');
             let btn = document.createElement('button');
             btn.innerText = 'Details';
             div.append(btn);
